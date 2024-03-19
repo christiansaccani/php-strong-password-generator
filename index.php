@@ -18,7 +18,7 @@
     
     <h1 class="text-center">A Real Password Generator</h1>
 
-    <form method="GET" id="my_form" class="d-flex flex-column align-items-center">
+    <form action="generated.php"GET" id="my_form" class="d-flex flex-column align-items-center">
 
         <div class="mb-3">
             <div class="d-flex flex-column align-items-center">
@@ -27,12 +27,6 @@
             </div>
         </div>
         <input id="submit" type="submit">
-
-        <?php
-            if (!empty($password_length)) {
-                echo "<p id='my_answer'>La password generata è: {$_SESSION['generatedPassword']}</p>";
-            }
-        ?>
 
     </form>
 
