@@ -2,6 +2,16 @@
 
 $password_length = isset($_GET['password_length']) ? $_GET['password_length'] : null;
 
+function generateRandomString($length) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$%?';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[random_int(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +22,9 @@ $password_length = isset($_GET['password_length']) ? $_GET['password_length'] : 
     <title>Password Generator</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     
     <h1 class="text-center">A Real Password Generator</h1>
@@ -26,6 +38,13 @@ $password_length = isset($_GET['password_length']) ? $_GET['password_length'] : 
             </div>
         </div>
         <input id="submit" type="submit">
+
+        <?php
+            if (!empty($password_length)) {
+                $generatedPassword = generateRandomString($password_length);
+                echo "<p id='my_answer'>La password generata è: $generatedPassword</p>";
+            }
+        ?>
 
     </form>
 
