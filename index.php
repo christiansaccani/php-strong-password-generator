@@ -35,6 +35,15 @@
                 </label>
             </div>
         </div>
+
+        <div class="mb-3">
+            <div class="form-check">
+                <input name="with_numbers" class="form-check-input" type="checkbox" value="true" id="flexCheckDefault" checked<?php if ($with_numbers) echo "checked"; ?>> <!-- per mantenere la compilazione del form-->
+                <label class="form-check-label" for="flexCheckDefault">
+                    Numbers
+                </label>
+            </div>
+        </div>
         <input id="submit" type="submit">
 
     </form>
