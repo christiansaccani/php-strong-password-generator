@@ -12,4 +12,8 @@ function generateRandomString($length) {
     return $randomString;
 }
 
+$password_length = isset($_GET['password_length']) ? $_GET['password_length'] : null;
+
+$_SESSION['generatedPassword'] = generateRandomString($password_length);
+
 ?>

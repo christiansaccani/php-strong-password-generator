@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include 'functions.php';
 ?>
 
@@ -29,8 +30,7 @@
 
         <?php
             if (!empty($password_length)) {
-                $generatedPassword = generateRandomString($password_length);
-                echo "<p id='my_answer'>La password generata è: $generatedPassword</p>";
+                echo "<p id='my_answer'>La password generata è: {$_SESSION['generatedPassword']}</p>";
             }
         ?>
 
