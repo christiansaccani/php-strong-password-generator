@@ -20,7 +20,7 @@
 
     <?php
     if (!empty($password_length)) {
-        echo "<p id='my_answer'>La password generata è: {$_SESSION['generatedPassword']}</p>";
+        echo "<p id='my_answer'>{$_SESSION['generatedPassword']}</p>";
     }
 ?>
 </body>

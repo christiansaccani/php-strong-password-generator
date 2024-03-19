@@ -44,6 +44,25 @@
                 </label>
             </div>
         </div>
+
+        <div class="mb-3">
+            <div class="form-check">
+                <input name="with_specials" class="form-check-input" type="checkbox" value="true" id="flexCheckDefault" <?php if ($with_specials) echo "checked"; ?>> <!-- per mantenere la compilazione del form-->
+                <label class="form-check-label" for="flexCheckDefault">
+                    Include Special Characters?
+                </label>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <div class="form-check">
+                <input name="with_repeats" class="form-check-input" type="checkbox" value="true" id="flexCheckDefault" checked <?php if ($with_repeats) echo "checked"; ?>> <!-- per mantenere la compilazione del form-->
+                <label class="form-check-label" for="flexCheckDefault">
+                    Can we repeat characters?
+                </label>
+            </div>
+        </div>
+
         <input id="submit" type="submit">
 
     </form>
