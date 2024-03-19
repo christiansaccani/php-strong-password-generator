@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Bad Words</h1>
+    <h1 class="text-center">A Real Password Generator</h1>
 
     <?php
     if (!empty($password_length)) {

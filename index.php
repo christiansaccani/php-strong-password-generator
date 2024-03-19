@@ -26,6 +26,15 @@
                 <input name="password_length" type="number" min="1" max="99" class="form-control" aria-describedby="inputGroup-sizing-sm" <?php if (!empty($password_length)) echo 'value="' . $password_length . '"'; ?>> <!-- per mantenere la compilazione del form-->
             </div>
         </div>
+
+        <div class="mb-3">
+            <div class="form-check">
+                <input name="with_letters" class="form-check-input" type="checkbox" value="true" id="flexCheckDefault" checked<?php if ($with_letters) echo "checked"; ?>> <!-- per mantenere la compilazione del form-->
+                <label class="form-check-label" for="flexCheckDefault">
+                    Letters
+                </label>
+            </div>
+        </div>
         <input id="submit" type="submit">
 
     </form>
